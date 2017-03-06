@@ -1,0 +1,49 @@
+// Media Queries
+//Default Style apply to Mobile First
+//-------------------------------------------------------All Sizes Touch Screens
+html.touch{
+
+}
+//-------------------------------------------------------Minimum Size and Up Changes
+@media (min-width: @screen-sm) {
+    
+}
+@media (min-width: @screen-md) {
+    
+}
+@media (min-width: @screen-lg) {
+    
+}
+
+//------------------------------------------------------------Specific Size Only
+@media (max-width: @screen-xs-max) {
+    .navbar-brand{
+        width: 100%;
+        text-align: center;
+    }
+    .list-group-item{
+        & > .badge{
+            
+        }
+    }
+    .navbar-nav{
+        padding: 0;
+        & > li{
+            display: inline-block;
+            width: 18%;
+        }
+    }
+}
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    .list-group-item{
+        & > .badge{
+            //width: 100%;
+        }
+    }
+}
+@media (min-width: @screen-md) and (max-width: @screen-md-max) {
+    
+}
+@media (min-width: @screen-lg) {
+   
+}

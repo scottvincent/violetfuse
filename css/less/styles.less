@@ -1,0 +1,187 @@
+//Starting Point Styles
+
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset and dependencies
+@import "normalize.less";
+@import "print.less";
+//@import "glyphicons.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+//@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "dropdowns.less";
+//@import "button-groups.less";
+//@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+//@import "breadcrumbs.less";
+//@import "pagination.less";
+//@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+//@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "responsive-embed.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+//@import "tooltip.less";
+//@import "popovers.less";
+//@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+@brand-primary: #400080;
+@brand-success: #36c31e;
+@font-family-sans-serif: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headings-font-family: 'Oswald', @font-family-sans-serif;
+
+.btn{
+    font-family: @headings-font-family;
+    border-radius: 50em;
+}
+.btn-success{
+    background: transparent;
+    border-width: 3px;
+    color: @brand-success;
+    border-color: @brand-success;
+    &:hover{
+        background: @brand-success;
+        border-color: @brand-success;
+    }
+}
+.navbar{
+    //margin-bottom: 20px;
+    border-bottom: 1px solid fade(@brand-primary, 15%);//@gray-lighter;
+}
+.navbar-toggle{
+    margin: (@navbar-height / 2)-30px 0;
+    margin-right: 15px;
+    height: 60px;
+}
+.navbar-brand{
+    padding: 8px 0;
+    & > img{
+        max-height: @navbar-height - 10px;
+        max-width: 100%; 
+        display: inline-block;
+    }
+}
+p{
+    font-size: 14px;
+}
+ol{
+    font-family: @headings-font-family;
+    color: @brand-primary;
+}
+hr{
+   border-color: fade(@brand-primary, 15%); 
+}
+.album-divider{
+    //border-color: @brand-primary;
+    //opacity: 0.3; 
+}
+.list-group-item{
+    font-family: @headings-font-family;
+    padding: 6px 10px;
+    & > .badge{
+        font-weight: 400;
+
+        float: left;
+        width: 2.5em;
+        border-radius: @border-radius-small;
+        text-align: center;
+        font-size: 2em;
+        margin-right: 0.5em;
+        line-height: 0.9em;
+        padding: 0;
+        background: @brand-primary;
+        font-size: 1.6em;
+        width: 2.2em;
+        margin-bottom: 0.2em;
+    }
+}
+.month{
+    display: block;
+    font-size: 0.6em;
+}
+.year{
+    display: block;
+    font-weight: 100;
+    font-size: 0.6em;
+}
+.showsVenue{
+    display: block;
+    .text-overflow();
+    margin: 0;
+}
+.showsBands{
+    display: block;
+    vertical-align: top;
+    font-size: 0.9em;
+     margin: 0 5px;
+     color: rgba(0,0,0,0.5);
+   
+}
+.jumbotron{
+    padding: 0px;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin: 1em 0;
+    & iframe {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+}
+
+.modal-list-group{
+    margin-bottom: 0;
+    & .list-group-item{
+        background: #f9f9f9;
+        border: none;
+        border-top: 1px solid #dfdfdf;
+        .clearfix();
+        
+        &:nth-child(2n){
+            background: #f0f0f0;
+        }
+    }
+}
+
+footer{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: @gray-dark;
+    margin-top: 1em;
+    font-size: 0.9em;
+    padding: 0.1em;
+    font-family: @headings-font-family;
+}
+
+@import "mediaqueries.less";
